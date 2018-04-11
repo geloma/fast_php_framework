@@ -1,4 +1,4 @@
-# php fast framework
+# PHP fast framework
 
     Run:
     1. Define Controller in controllers/ as module_name_folder/controller_name.php
