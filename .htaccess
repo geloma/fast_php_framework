@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|styles|scripts|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ErrorDocument 404     /fast/views/error/404.html
+ErrorDocument 403     /fast/views/error/403.html
+RewriteRule ^(.*)$ /fast/index.php?url=$1 [L,QSA]
